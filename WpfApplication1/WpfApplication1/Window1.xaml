@@ -1,0 +1,13 @@
+﻿<Window x:Class="WpfApplication1.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="HangoutPhone" Height="383" Width="412">
+    <Grid>
+        <RichTextBox Height="236" Margin="2,64,-2,45" Name="chatDisplay" Width="390" IsEnabled="False" VerticalScrollBarVisibility="Visible" />
+        <TextBox Height="31" Margin="4,0,87,9" Name="messageBox" VerticalAlignment="Bottom" IsEnabled="False" />
+        <Button Height="30" HorizontalAlignment="Right" Margin="0,0,6,9" Name="send" VerticalAlignment="Bottom" Width="75" IsEnabled="False">Send</Button>
+        <TextBox Height="30" HorizontalAlignment="Left" Margin="12,2,0,0" Name="usernameBox" VerticalAlignment="Top" Width="168" />
+        <PasswordBox Height="30" HorizontalAlignment="Right" Margin="0,2,12,0" Name="passwordBox" VerticalAlignment="Top" Width="168" />
+        <Button Height="20" Margin="10,38,4,0" Name="connect" VerticalAlignment="Top" Click="connect_Click">Connect</Button>
+    </Grid>
+</Window>

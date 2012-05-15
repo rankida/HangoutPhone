@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="2005-jabber-net">
+</Property><Property Name="Solution File" Value="C:\dev\HangoutPhone\JabberNet-2.1.0.710\2005-jabber-net.sln">
+</Property><Property Name="Date" Value="15 May 2012">
+</Property><Property Name="Time" Value="20:28">
+</Property></Properties><Event ErrorLevel="0" Project="2005-test" Source="test\2005-test.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="2005-test" Source="test\2005-test.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="2005-muzzle" Source="muzzle\2005-muzzle.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="2005-muzzle" Source="muzzle\2005-muzzle.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="2005-Example" Source="Example\2005-Example.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="2005-Example" Source="Example\2005-Example.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="2005-VB.Example" Source="VB.Example\2005-VB.Example.vbproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="2005-VB.Example" Source="VB.Example\2005-VB.Example.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="2005-ConsoleClient" Source="ConsoleClient\2005-ConsoleClient.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="2005-ConsoleClient" Source="ConsoleClient\2005-ConsoleClient.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="2005-jabber-net" Source="2005-jabber-net.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="2005-jabber-net" Source="2005-jabber-net.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="JabberNetInstaller" Source="JabberNetInstaller\JabberNetInstaller.wixproj" Description="The path to the WiX targets file has been updated.">
+</Event><Event ErrorLevel="0" Project="netlib.Dns" Source="netlib.Dns\netlib.Dns.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="netlib.Dns" Source="netlib.Dns\netlib.Dns.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="2005-jabber-net.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="2005-jabber-net.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="2005-test" Source="test\2005-test.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="2005-muzzle" Source="muzzle\2005-muzzle.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="2005-Example" Source="Example\2005-Example.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="2005-VB.Example" Source="VB.Example\2005-VB.Example.vbproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="2005-ConsoleClient" Source="ConsoleClient\2005-ConsoleClient.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="2005-jabber-net" Source="2005-jabber-net.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="netlib.Dns" Source="netlib.Dns\netlib.Dns.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>
