@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 
 namespace WpfApplication1
 {
+    using System.ComponentModel;
     using System.Xml;
 
     /// <summary>
@@ -45,7 +46,7 @@ namespace WpfApplication1
 
         private void Display(string raw)
         {
-            this.chatDisplay.AppendText(raw);
+            this.chatDisplay.Dispatcher.BeginInvoke().AppendText(raw);
         }
 
         private void OnError(object arg1, Exception ex)
@@ -56,6 +57,12 @@ namespace WpfApplication1
         private void OnStreamError(object arg1, XmlElement arg2)
         {
             throw new NotImplementedException("Stream Error");
+        }
+
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            this.jabber.Close();
+            base.OnClosing(e);
         }
     }
 }

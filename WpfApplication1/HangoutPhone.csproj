@@ -93,9 +93,13 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\JabberNet-2.1.0.710\2008-jabber-net.csproj">
+    <ProjectReference Include="..\JabberNet-2.1.0.710\2008-jabber-net.csproj">
       <Project>{6CAE854A-F202-4D2B-B10E-E8D8E81E5EF5}</Project>
       <Name>2008-jabber-net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JabberNet-2.1.0.710\netlib.Dns\netlib.Dns.csproj">
+      <Project>{40AC7A7C-D3E5-46DF-B740-06BD9D2A00E1}</Project>
+      <Name>netlib.Dns</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
