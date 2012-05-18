@@ -99,9 +99,12 @@ namespace WpfApplication1
 
         public void Close()
         {
-            this.jabberClient.Close();
-            this.jabberClient.Dispose();
-            this.jabberClient = null;
+            if (this.jabberClient != null)
+            {
+                this.jabberClient.Close();
+                this.jabberClient.Dispose();
+                this.jabberClient = null;
+            }
         }
 
         private void jc_OnLoginRequired(object sender)
