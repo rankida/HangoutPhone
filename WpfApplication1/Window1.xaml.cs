@@ -25,7 +25,10 @@
 
             this.jabber = new JabberLib(username, password, host)
                 {
-                    OnReadText = this.Display, OnError = this.OnError, OnStreamError = this.OnStreamError 
+                    OnReadText = this.Display,
+                    OnWriteText = this.DisplaySent,
+                    OnError = this.OnError,
+                    OnStreamError = this.OnStreamError
                 };
             this.jabber.Connect(true);
             this.messageBox.IsEnabled = true;
@@ -36,7 +39,12 @@
 
         private void Display(string raw)
         {
-            this.chatDisplay.BeginActionInvoke(() => this.chatDisplay.AppendText(raw + Environment.NewLine));
+            this.chatDisplay.BeginActionInvoke(() => this.chatDisplay.AppendText("RECV: " + raw + Environment.NewLine));
+        }
+
+        private void DisplaySent(string raw)
+        {
+            this.chatDisplay.BeginActionInvoke(() => this.chatDisplay.AppendText("SENT: " + raw + Environment.NewLine));
         }
 
         private void OnError(object arg1, Exception ex)

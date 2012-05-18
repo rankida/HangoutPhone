@@ -43,6 +43,12 @@ namespace WpfApplication1
         public Action<string> OnReadText { get; set; }
 
         /// <summary>
+        /// Gets or sets the action to be performed when text is written
+        /// onto the jabber stream.
+        /// </summary>
+        public Action<string> OnWriteText { get; set; }
+
+        /// <summary>
         /// Gets or sets the action perfomred when things go wrong
         /// </summary>
         public Action<object, Exception> OnError { get; set; }
@@ -56,14 +62,9 @@ namespace WpfApplication1
         {
             this.jabberClient = new JabberClient();
             this.jabberClient.OnReadText += this.InternalOnReadText;
+            this.jabberClient.OnWriteText += this.InternalOnWriteText;
             this.jabberClient.OnError += new ExceptionHandler(this.OnError);
             this.jabberClient.OnStreamError += new jabber.protocol.ProtocolHandler(this.OnStreamError);
-
-            // regisert presence
-            this.jabberClient.AutoLogin = false;
-            this.jabberClient.OnLoginRequired += this.jc_OnLoginRequired;
-            this.jabberClient.OnRegisterInfo += this.jc_OnRegisterInfo;
-            this.jabberClient.OnRegistered += this.jc_OnRegistered;
 
             var jid = new JID(this.username);
             this.jabberClient.User = jid.User;
@@ -79,6 +80,17 @@ namespace WpfApplication1
             this.capabilityManager = new CapsManager { Stream = this.jabberClient, Node = "http://rankida.com" };
 
             this.jabberClient.Connect();
+        }
+
+        private void InternalOnWriteText(object sender, string txt)
+        {
+            if (string.IsNullOrEmpty(txt))
+            {
+                return;
+            }
+
+            Console.Out.WriteLine("SENT: " + txt);
+            this.OnWriteText(txt);
         }
 
         private void InternalOnReadText(object sender, string txt)
